@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Informacion de Cuidadores</title>
+</head>
+<body>
+    <h1>Información de Lassie</h1>
+    <p>Hay {{ lassie_count }} perros llamados Lassie</p>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Raza</th>
+                <th>Edad</th>
+                <th>Peso</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for perro in lassies %}
+                <tr>
+                    <td>{{ perro.id }}</td>
+                    <td>{{ perro.nombre }}</td>
+                    <td>{{ perro.raza }}</td>
+                    <td>{{ perro.edad }}</td>
+                    <td>{{ perro.peso }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h1>Perros asignados a Mario</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Raza</th>
+                <th>Edad</th>
+                <th>Peso</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for perro in marios_perros %}
+                <tr>
+                    <td>{{ perro.id }}</td>
+                    <td>{{ perro.nombre }}</td>
+                    <td>{{ perro.raza }}</td>
+                    <td>{{ perro.edad }}</td>
+                    <td>{{ perro.peso }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
