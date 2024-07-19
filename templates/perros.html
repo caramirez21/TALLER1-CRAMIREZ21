@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Perros</title>
+  </head>
+  <body>
+    <h1>Todos los Perros</h1>
+    <ul>
+      {% for Perro in perros %}
+        <li>{{ Perro.nombre }} - {{ Perro.raza }} - {{ Perro.edad }} años - {{ Perro.peso }} kg</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
